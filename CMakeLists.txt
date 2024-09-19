@@ -9,7 +9,7 @@ add_library(variant INTERFACE)
 target_include_directories(variant
   INTERFACE
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-  $<INSTALL_INTERFACE:include/variant>
+  $<INSTALL_INTERFACE:include>
 )
 
 include(CMakePackageConfigHelpers)
@@ -28,7 +28,7 @@ install(TARGETS variant
 
 install(DIRECTORY
   "${CMAKE_CURRENT_SOURCE_DIR}/include/mapbox"
-  DESTINATION include/variant
+  DESTINATION include
 )
 
 install(
